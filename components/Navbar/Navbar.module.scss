@@ -1,0 +1,123 @@
+@use '../../styles/_index.scss' as *;
+
+.header {
+    // background-color: rgba($black0, 0.7);
+    display: flex;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    -ms-backdrop-filter: blur(5px);;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+    position: fixed;
+    // position: -webkit-sticky; /* Safari */
+    top: 0;
+    z-index: 10;
+    min-width: 100%;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    height: 100%;
+    font-family: 'Source Serif Pro Italic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    & > ul {
+        list-style: none;
+        font-size: 1.125rem;
+        transition: 2s ease all;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        & > li {
+            font-weight: 100;
+
+                & > a {
+                    text-decoration: none;
+        
+                    // &:hover {
+                    //     color: $white0;
+                    // }
+        
+                    // &:active {
+                    //     color: $white0;
+                    // }
+                }
+            }
+        }
+}
+
+
+.btnOrcamento {
+    // border: 1px solid $golden;
+    padding: .5rem .875rem;
+    font-family: 'Manrope';
+    text-transform: uppercase;
+    color: white;
+    font-size: .875rem;
+    font-weight: 100;
+    letter-spacing: .0625rem;
+
+    &:hover {
+        cursor: pointer;
+        // background-color: $golden;
+        // color: $white0;
+        -webkit-transition: background-color .2s ease-out;
+        -moz-transition: background-color .2s ease-out;
+        -o-transition: background-color .2s ease-out;
+        transition: background-color .2s ease-out;
+    }
+
+    // &.active  {
+    //     color: $white0;
+    //     background-color: $golden;
+    // }
+}
+
+.logoNavbar {
+    width: 11rem;
+    cursor: pointer;
+}
+
+.menuEnavbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navItemActive  {
+    // color: $white0;
+    font-weight: 700; 
+}
+
+.activeUrl {
+    background-color: rgba($golden, 0.4);
+    color: green;
+}
+
+// @media screen and (max-width:$max-tablet) {
+
+//     .header {
+//         // min-width: 100%;
+//     }
+
+//     .itemsMenu {
+//         display: none;
+//     }   
+
+//     .btnOrcamento {
+//         color: $golden;
+//     }
+
+//     .active {
+//         color: white;
+//     }
+// }
+
+@media (max-width: 448px) {
+    .btnOrcamento {
+        display: none
+    }
+}
